@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
       
         else if (Input.GetKey(KeyCode.A))
         {
+            transform.Translate(Vector3.left * movementspeed * Time.deltaTime);
             transform.Rotate(new Vector3(0, -rotateSpeed * Time.deltaTime, 0));
             animcontroller.SetBool("isLeft", true);
         }
